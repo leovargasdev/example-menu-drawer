@@ -1,6 +1,10 @@
-<h4 align = "center">
+<h1 align="center">
   Exemplo menu drawer personalidado
-</h4>
+</h1>
+
+<p align="center">
+  <img alt="Funcionamento do menu" src=".github/video.gif" />
+</p>
 
 ## 💻 Projeto
 
