@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, useWindowDimensions, Alert } from 'react-native';
+import { StyleSheet, Text, View, useWindowDimensions, Alert } from 'react-native';
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
 import {
   DrawerItem,
@@ -23,10 +23,10 @@ const CustomDrawer = (props: any) => {
           key="iconToggle"
           onPress={() => props.navigation.toggleDrawer()}
           label={() => <Icon name="bars" color="#FFF" size={30} />}
-          style={{ position: 'absolute', top: 0,  left: 1 }}
+          style={styles.iconToggle}
           />
         {/* Lista as Screen do Drawer */}
-        <DrawerItemList {...props} activeTintColor="#212121" labelStyle={{fontSize: 20, color: '#FFF'}}/>
+        <DrawerItemList {...props} activeTintColor="#212121" labelStyle={styles.label}/>
         {/* Botão com o evento para encerrar sessão */}
         <DrawerItem
           key="logout"
@@ -35,7 +35,7 @@ const CustomDrawer = (props: any) => {
             Alert.alert('Sessão encerrada!');
             props.navigation.toggleDrawer(); // minimiza o menu
           }}
-          labelStyle={{ fontSize: 20, color: '#FFF' }}
+          labelStyle={styles.label}
           />
       </View>
     </DrawerContentScrollView>
@@ -43,13 +43,13 @@ const CustomDrawer = (props: any) => {
 }
 
 const ScreenDrawerOne = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+  <View style={styles.containerScreen}>
     <Text style={{color: '#000', fontSize: 24}}>tela 1</Text>
   </View>
 );
 
 const ScreenDrawerTwo = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+  <View style={styles.containerScreen}>
     <Text style={{color: '#000', fontSize: 24}}>tela 2</Text>
   </View>
 );
@@ -60,5 +60,22 @@ const Routes: React.FC = () => (
     <Drawer.Screen name="MENU 2" component={ScreenDrawerTwo} />
   </Drawer.Navigator>
 );
+
+const styles = StyleSheet.create({
+  containerScreen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  label: {
+    fontSize: 20, 
+    color: '#FFF'
+  },
+  iconToggle: {
+    position: 'absolute',
+    top: 0,
+    left: 1
+  }
+});
 
 export default Routes;
