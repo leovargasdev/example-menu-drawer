@@ -3,22 +3,22 @@
 </h1>
 
 <p align="center">
-  <img alt="Funcionamento do menu" src=".github/video.gif" />
+  <img alt="Funcionamento do menu" src=".github/video.gif" width="400"/>
 </p>
 
 ## 💻 Projeto
 
-Repositório para estudo das propriedades do menu drawer do [react navigation](https://reactnavigation.org/), mais especificamente voltado para a criação de um componente personalizado a partir da propriedade `drawerContent` do <Drawer.Navigator /> permitindo assim substituir o componente nativo.
+Repositório para estudo das propriedades do menu drawer do [react navigation](https://reactnavigation.org/), mais especificamente voltado para a criação de um componente personalizado a partir da propriedade `drawerContent` do *Drawer.Navigator* permitindo assim substituir o componente nativo.
 
 Modificações que você verá neste projeto:
 
-1. *Ícones*:  O componente `DrawerItem` na propriedade `label` permite carregar uma função que retorna um elemento react, desta maneira, pode-se carregar um item em forma de ícone.
+1. **Ícones**:  O componente `DrawerItem` na propriedade `label` permite carregar uma função que retorna um elemento react, desta maneira, pode-se carregar um ícone nos itens do menu.
  
-2. *Orientações dos elementos:* No elemento nativo você não conseguiria alinhar os itens na vertical ou colocar itens com posições absolutas.
+2. **Orientações dos elementos:** No elemento nativo você não conseguiria alinhar os itens na vertical ou colocar itens com posições absolutas.
  
-3. *Evento do item:* No componente `DrawerItem` também existe a propriedade `onPress` sendo possível executar uma função ao pressionar o item, pois no menu normal só era permitido links para as rotas do drawer.
+3. **Evento do item:** No componente `DrawerItem` também existe a propriedade `onPress` sendo possível executar uma função ao pressionar o item, pois no menu normal só era permitido links para as rotas do drawer.
 
-Nota: Ao optar em usar a propriedade `drawerContent` todas as Screens não serão listadas, por isso deve ser importado o component <DrawerItemList /> para que o menu as reconheça.
+Nota: Ao optar em usar a propriedade `drawerContent` todas as Screens não serão listadas, por isso deve ser importado o componente *DrawerItemList* para que o menu as reconheça.
 
 ## :rocket: Tecnologias
 
